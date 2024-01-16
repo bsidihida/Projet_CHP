@@ -46,7 +46,7 @@
 double u(NPoint pt, double t=0.)
 {
   double x=pt[0], y=pt[1];
-  return y*y +2*y;
+  return x*x +2*x;
 }
 
 double laplacianU(NPoint pt)
@@ -136,7 +136,7 @@ int main(int ac, char **av) {
     NPoint octCenter = grid->evalCellCentroid(cellId);
     kappaCC.emplace(cellId);
     
-      kappaCC[cellId] = 1./(1+octCenter[1]);
+      kappaCC[cellId] = 1./(1+octCenter[0]);
     
     
     rhs.emplace(cell.getId());
@@ -147,7 +147,7 @@ int main(int ac, char **av) {
     NPoint octCenter = grid->evalInterfaceCentroid(intId);
     kappaFC.emplace(intId);
       
-        kappaFC[intId] =1./(octCenter[1]+1); 
+        kappaFC[intId] =1./(octCenter[0]+1); 
 
       
     
