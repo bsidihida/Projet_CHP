@@ -46,7 +46,7 @@
 double u(NPoint pt, double t=0.)
 {
   double x=pt[0], y=pt[1];
-  return x*x +2*x;
+  return y*y +2*y;
 }
 
 double laplacianU(NPoint pt)
@@ -63,10 +63,16 @@ int main(int ac, char **av) {
 
   /*----------------- Boundary conditions ------------------*/
   BoundaryConditions BC;
+  // BC.addCondition(0, "Neumann", u, Var::P);
+  // BC.addCondition(1, "Neumann", u, Var::P);
+  // BC.addCondition(2, "Neumann", u, Var::P);
+  // BC.addCondition(3, "Neumann", u, Var::P);
+  
   BC.addCondition(0, "Dirichlet", u, Var::P);
   BC.addCondition(1, "Dirichlet", u, Var::P);
   BC.addCondition(2, "Dirichlet", u, Var::P);
   BC.addCondition(3, "Dirichlet", u, Var::P);
+  
 
 
   auto start = std::chrono::high_resolution_clock::now();
@@ -97,22 +103,11 @@ int main(int ac, char **av) {
   for (auto& cell: grid->getCells())
   { 
     cellId = cell.getId();
-
-    //NPoint octCenter = grid->evalCellCentroid(cellId);
     
     kappaCC.emplace(cellId);
     
-      kappaCC[cellId] =grid->evalCellVolume(cellId);;
-      
-     // printf("Le kappacc pour %d,est%f\n",cellId,kappaCC[cellId]);
-
-     //if (octCenter[0]==1  &&  octCenter[1]==1) {
-
-
-     // printf("Le kappacc pour %d,est%f\n",cellId,kappaCC[cellId]);
-
-
-   // }
+    kappaCC[cellId] =grid->evalCellVolume(cellId);;
+    
     
     
     rhs.emplace(cell.getId());
@@ -124,20 +119,11 @@ int main(int ac, char **av) {
     kappaFC.emplace(intId);
       
         kappaFC[intId] =1./(octCenter[0]+1.); 
-        //printf("Le kappaFC pour %d,est%f\n",intId,kappaFC[intId]);
-
-      
-    
-      
-    
-  }
-
-
-
+        // cout << kappaFC[intID] << endl;
 
   
-
-
+    
+  }
   
 
   lap->buildFVMatrix(kappaCC,
