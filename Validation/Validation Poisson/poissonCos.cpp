@@ -70,44 +70,8 @@ int main(int ac, char **av) {
 
 
   auto start = std::chrono::high_resolution_clock::now();
-  Grid *grid = new Grid(0, 0, 0, 1, 0.01, &BC, GRID_2D);
+  Grid *grid = new Grid(0, 0, 0, 1, 0.025, &BC, GRID_2D);
 
-  /*----------------- Non uniform grid ------------------*/
-  // UNCOMMENT ONE OF THE TWO FOR LOOP IF YOU WANT A NON UNIFORM GRID
-
-  /*------------------- Refinment by boxes --------------*/
-  //for (int k=0; k<3; k++)
-  //{
-  //	for (auto &cell : grid->getCells()) {
-  //	    const long &id = cell.getId();
-  //	    NPoint pt = grid->evalCellCentroid(id);
-  //	    for (auto &v: pt)
-  //	    {
-  //		v = std::abs(v);
-  //	    }
-  //	    double xInf = *std::max_element(pt.begin(), pt.end());
-  //
-  //	    if( xInf <= (M_PI/4.+ 0.3 * k))
-  //	    {
-  //		grid->markCellForRefinement(id);
-  //	    }
-  //
-  //	}
-  //	grid->update(false,true);
-  //}
-
-  /*----------------------- Randomic refinment -----------------*/
-  //for (int k=0; k<3; k++)
-  //{
-  //	for (auto &cell : grid->getCells())
-  //	{
-  //	    const long &id = cell.getId();
-  //	    if (id%5 ==0)
-  //		grid->markCellForRefinement(id);
-  //
-  //	}
-  //	grid->update(false,true);
-  //}
 
 
   auto stop = std::chrono::high_resolution_clock::now();
@@ -133,10 +97,22 @@ int main(int ac, char **av) {
   for (auto& cell: grid->getCells())
   { 
     cellId = cell.getId();
-    NPoint octCenter = grid->evalCellCentroid(cellId);
+
+    //NPoint octCenter = grid->evalCellCentroid(cellId);
+    
     kappaCC.emplace(cellId);
     
-      kappaCC[cellId] = 1./(1+octCenter[0]);
+      kappaCC[cellId] =grid->evalCellVolume(cellId);;
+      
+     // printf("Le kappacc pour %d,est%f\n",cellId,kappaCC[cellId]);
+
+     //if (octCenter[0]==1  &&  octCenter[1]==1) {
+
+
+     // printf("Le kappacc pour %d,est%f\n",cellId,kappaCC[cellId]);
+
+
+   // }
     
     
     rhs.emplace(cell.getId());
@@ -147,13 +123,20 @@ int main(int ac, char **av) {
     NPoint octCenter = grid->evalInterfaceCentroid(intId);
     kappaFC.emplace(intId);
       
-        kappaFC[intId] =1./(octCenter[0]+1); 
+        kappaFC[intId] =1./(octCenter[0]+1.); 
+        //printf("Le kappaFC pour %d,est%f\n",intId,kappaFC[intId]);
 
       
     
       
     
   }
+
+
+
+
+  
+
 
   
 
