@@ -74,7 +74,7 @@ int main(int ac, char **av) {
   BoundaryConditions BC;
 
   // BC for phi function
-  BC.addCondition(0, "Dirichlet", phi2, Var::P);
+  BC.addCondition(0, "Neumann", phi2, Var::P);
   BC.addCondition(1, "Neumann", phi, Var::P);
   BC.addCondition(2, "Neumann", phi, Var::P);
   BC.addCondition(3, "Neumann", phi, Var::P);
@@ -86,7 +86,7 @@ int main(int ac, char **av) {
   BC.addCondition(3, "Neumann", phi, Var::Uy);
   
   // Init grid
-  Grid *g = new Grid(-1, -1, 0, 2, 0.05, &BC, GRID_2D);
+  Grid *g = new Grid(0, 0, 0, 2, 0.05, &BC, GRID_2D);
   g->update(false,true);
   std::cout<<"---------fin creation grille------"<<std::endl;
 
@@ -121,8 +121,7 @@ int main(int ac, char **av) {
 
     phiT.emplace(cellId);
     phiTBuff.emplace(cellId);
-    //phiT[cellId]  = dist(octCenter[0],octCenter[1]);
-    phiT[cellId]  = 0.;
+    phiT[cellId]  = 1.;
 
   }
 
@@ -130,7 +129,7 @@ int main(int ac, char **av) {
   velFC = proj.FaceCenterProjection(velCC);
 
   double t=0.;
-  double dt = 0.001;
+  double dt = 0.01;
   auto i = 0u;
 
   /*--------------------- Time loop -------------------*/
