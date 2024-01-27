@@ -22,7 +22,7 @@
 
 #include <iostream>
 #include "Neos.hpp"
-#include "bitpit.hpp"
+//#include "bitpit.hpp"
 #include "prediction-projection/Projection.hpp"
 #include <chrono>
 
@@ -33,37 +33,50 @@ using namespace neos;
 
 double phi(NPoint pt, double t=0.)
 {
-  
-  return 0;
+  double x = pt[0], y=pt[1];
+  double R = sqrt(x*x + y*y);
+  double f = tanh(R)/(cosh(R) * cosh(R));
+  double temp = (f *t) / (0.385 * R);
+  return -tanh(0.5 * y *cos(temp) - 0.5 * x * sin(temp));
 }
 
 double phi2(NPoint pt, double t=0.)
 {
- 
-  return 1;
+  double x = pt[0], y=pt[1];
+  double R = sqrt(x*x + y*y);
+  double f = tanh(R)/(cosh(R) * cosh(R));
+  double temp = f / (0.385 * R);
+  return temp * -y;
 }
 
-
-
-
-
-
-
-
-double dist(double x,double y)
-{   
-    double yc;
-    yc=0.5;
-    double distance;
-    distance=y-yc;
-    return distance;
-  
-  
+double phi3(NPoint pt, double t=0.)
+{
+  double x = pt[0], y=pt[1];
+  double R = sqrt(x*x + y*y);
+  double f = tanh(R)/(cosh(R) * cosh(R));
+  double temp = f / (0.385 * R);
+  return temp * x;
 }
 
+NPoint T(double x, double y, int octId, Grid *g)
+{
+  NPoint octCenter = g->evalCellCentroid(octId);
+  double h = g->evalCellSize(octId);
 
+  return {h/2. * x + octCenter[0], h/2. * y + octCenter[1], 0};
+}
 
+double computeIntegralPhi(int octId, Grid *g, double t=0.)
+{
+  double h = g->evalCellSize(octId);
 
+  return h*h/4.
+         * ( phi(T(sqrt(1./3), sqrt(1./3), octId, g),t)
+             +   phi(T(-sqrt(1./3), sqrt(1./3), octId, g),t)
+             +   phi(T(-sqrt(1./3), -sqrt(1./3), octId, g),t)
+             +   phi(T(sqrt(1./3), -sqrt(1./3), octId, g),t ));
+
+}
 
 int main(int ac, char **av) {
 
@@ -74,19 +87,19 @@ int main(int ac, char **av) {
   BoundaryConditions BC;
 
   // BC for phi function
-  BC.addCondition(0, "Neumann", phi2, Var::P);
-  BC.addCondition(1, "Neumann", phi, Var::P);
-  BC.addCondition(2, "Neumann", phi, Var::P);
-  BC.addCondition(3, "Neumann", phi, Var::P);
+  BC.addCondition(0, "Dirichlet", phi, Var::P);
+  BC.addCondition(1, "Dirichlet", phi, Var::P);
+  BC.addCondition(2, "Dirichlet", phi, Var::P);
+  BC.addCondition(3, "Dirichlet", phi, Var::P);
 
   // BC for velocity
-  BC.addCondition(0, "Neumann", phi, Var::Ux);
-  BC.addCondition(1, "Neumann", phi, Var::Ux);
-  BC.addCondition(2, "Neumann", phi, Var::Uy);
-  BC.addCondition(3, "Neumann", phi, Var::Uy);
-  
+  BC.addCondition(0, "Dirichlet", phi2, Var::Ux);
+  BC.addCondition(1, "Dirichlet", phi2, Var::Ux);
+  BC.addCondition(2, "Dirichlet", phi3, Var::Uy);
+  BC.addCondition(3, "Dirichlet", phi3, Var::Uy);
+
   // Init grid
-  Grid *g = new Grid(0, 0, 0, 2, 0.05, &BC, GRID_2D);
+  Grid *g = new Grid(-1, -1, 0, 2, 0.05, &BC, GRID_2D);
   g->update(false,true);
   std::cout<<"---------fin creation grille------"<<std::endl;
 
@@ -103,7 +116,7 @@ int main(int ac, char **av) {
 
   Projection proj(g);
   Transport trspt(g, &stencils);
-  
+  //Transport trspt(g);
   int cellId;
 
   /*----------- Init velocity and phi function ------------*/
@@ -112,24 +125,26 @@ int main(int ac, char **av) {
     cellId = cell.getId();
     velCC.emplace(cellId);
 
-    
+    double cellVolume = g->evalCellVolume(cellId);
     NPoint octCenter = g->evalCellCentroid(cellId);
-    
+    double R = sqrt(octCenter[0]*octCenter[0]
+                    + octCenter[1]*octCenter[1]);
+    double f = tanh(R)/(cosh(R) * cosh(R));
+    double temp = f / (0.385 * R);
 
-  
-    velCC[cellId] = {2.5,0,0};
+    velCC[cellId] = {-octCenter[1], octCenter[0], 0};
+    velCC[cellId] *= temp;
 
     phiT.emplace(cellId);
     phiTBuff.emplace(cellId);
-    phiT[cellId]  = 1.;
-
+    phiT[cellId]  = 1./cellVolume * computeIntegralPhi(cellId, g);;
   }
 
   /*--------- Projection of velocity at face center ----------*/
   velFC = proj.FaceCenterProjection(velCC);
 
   double t=0.;
-  double dt = 0.01;
+  double dt = 0.001;
   auto i = 0u;
 
   /*--------------------- Time loop -------------------*/
@@ -144,6 +159,7 @@ int main(int ac, char **av) {
                                           phiT,
                                           t,
                                           Var::P);
+
     // Write outputs
     std::vector<double> divgV = PVtoV(divg, g);
     std::vector<double> phiTV = PVtoV(phiT, g);
