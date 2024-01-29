@@ -1,0 +1,762 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1c57c/fast && /usr/bin/make -f CMakeFiles/cmTC_1c57c.dir/build.make CMakeFiles/cmTC_1c57c.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c57c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_1c57c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1c57c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c57c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_1c57c.dir/CheckFunctionExists.c.o  -o cmTC_1c57c 
+/usr/bin/ld: CMakeFiles/cmTC_1c57c.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1c57c.dir/build.make:87: cmTC_1c57c] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1c57c/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb9b6/fast && /usr/bin/make -f CMakeFiles/cmTC_cb9b6.dir/build.make CMakeFiles/cmTC_cb9b6.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb9b6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_cb9b6.dir/src.c.o   -c /test1/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cb9b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb9b6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_cb9b6.dir/src.c.o  -o cmTC_cb9b6 
+/usr/bin/ld: CMakeFiles/cmTC_cb9b6.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_cb9b6.dir/build.make:87: cmTC_cb9b6] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cb9b6/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a5042/fast && /usr/bin/make -f CMakeFiles/cmTC_a5042.dir/build.make CMakeFiles/cmTC_a5042.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a5042.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a5042.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a5042
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5042.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a5042.dir/CheckFunctionExists.c.o  -o cmTC_a5042  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a5042.dir/build.make:87: cmTC_a5042] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a5042/fast] Error 2
+
+
+
+Determining if the function cblas_zgemm3m exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_473de/fast && /usr/bin/make -f CMakeFiles/cmTC_473de.dir/build.make CMakeFiles/cmTC_473de.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_473de.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m   -o CMakeFiles/cmTC_473de.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_473de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_473de.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m    -rdynamic CMakeFiles/cmTC_473de.dir/CheckFunctionExists.c.o  -o cmTC_473de  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_473de.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cblas_zgemm3m'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_473de.dir/build.make:88: cmTC_473de] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_473de/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c9940/fast && /usr/bin/make -f CMakeFiles/cmTC_c9940.dir/build.make CMakeFiles/cmTC_c9940.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c9940.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_c9940.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c9940
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9940.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_c9940.dir/CheckFunctionExists.c.o  -o cmTC_c9940  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_c9940.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c9940.dir/build.make:88: cmTC_c9940] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c9940/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_00eba/fast && /usr/bin/make -f CMakeFiles/cmTC_00eba.dir/build.make CMakeFiles/cmTC_00eba.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00eba.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_00eba.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_00eba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00eba.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_00eba.dir/CheckFunctionExists.c.o  -o cmTC_00eba  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_00eba.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_00eba.dir/build.make:89: cmTC_00eba] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_00eba/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0ab3b/fast && /usr/bin/make -f CMakeFiles/cmTC_0ab3b.dir/build.make CMakeFiles/cmTC_0ab3b.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ab3b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_0ab3b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0ab3b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ab3b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_0ab3b.dir/CheckFunctionExists.c.o  -o cmTC_0ab3b  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_0ab3b.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_0ab3b.dir/build.make:89: cmTC_0ab3b] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0ab3b/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0810c/fast && /usr/bin/make -f CMakeFiles/cmTC_0810c.dir/build.make CMakeFiles/cmTC_0810c.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0810c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_0810c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0810c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0810c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_0810c.dir/CheckFunctionExists.c.o  -o cmTC_0810c  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_0810c.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_0810c.dir/build.make:89: cmTC_0810c] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0810c/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_10d0b/fast && /usr/bin/make -f CMakeFiles/cmTC_10d0b.dir/build.make CMakeFiles/cmTC_10d0b.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_10d0b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_10d0b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_10d0b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10d0b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_10d0b.dir/CheckFunctionExists.c.o  -o cmTC_10d0b  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_10d0b.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_10d0b.dir/build.make:89: cmTC_10d0b] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_10d0b/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2c904/fast && /usr/bin/make -f CMakeFiles/cmTC_2c904.dir/build.make CMakeFiles/cmTC_2c904.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2c904.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_2c904.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2c904
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c904.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_2c904.dir/CheckFunctionExists.c.o  -o cmTC_2c904  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_2c904.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2c904.dir/build.make:89: cmTC_2c904] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2c904/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_10fa3/fast && /usr/bin/make -f CMakeFiles/cmTC_10fa3.dir/build.make CMakeFiles/cmTC_10fa3.dir/build
+make[1]: Entering directory '/test1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_10fa3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_10fa3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_10fa3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10fa3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_10fa3.dir/CheckFunctionExists.c.o  -o cmTC_10fa3  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_10fa3.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_10fa3.dir/build.make:89: cmTC_10fa3] Error 1
+make[1]: Leaving directory '/test1/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_10fa3/fast] Error 2
+
+
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ae573/fast && /usr/bin/make -f CMakeFiles/cmTC_ae573.dir/build.make CMakeFiles/cmTC_ae573.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ae573.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_ae573.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ae573
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae573.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_ae573.dir/CheckFunctionExists.c.o  -o cmTC_ae573 
+/usr/bin/ld: CMakeFiles/cmTC_ae573.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ae573.dir/build.make:87: cmTC_ae573] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ae573/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_67af9/fast && /usr/bin/make -f CMakeFiles/cmTC_67af9.dir/build.make CMakeFiles/cmTC_67af9.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_67af9.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_67af9.dir/src.c.o   -c /test2/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_67af9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67af9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_67af9.dir/src.c.o  -o cmTC_67af9 
+/usr/bin/ld: CMakeFiles/cmTC_67af9.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_67af9.dir/build.make:87: cmTC_67af9] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_67af9/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3abcb/fast && /usr/bin/make -f CMakeFiles/cmTC_3abcb.dir/build.make CMakeFiles/cmTC_3abcb.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3abcb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3abcb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3abcb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3abcb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_3abcb.dir/CheckFunctionExists.c.o  -o cmTC_3abcb  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3abcb.dir/build.make:87: cmTC_3abcb] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3abcb/fast] Error 2
+
+
+
+Determining if the function cblas_zgemm3m exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ffa9f/fast && /usr/bin/make -f CMakeFiles/cmTC_ffa9f.dir/build.make CMakeFiles/cmTC_ffa9f.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ffa9f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m   -o CMakeFiles/cmTC_ffa9f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ffa9f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffa9f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m    -rdynamic CMakeFiles/cmTC_ffa9f.dir/CheckFunctionExists.c.o  -o cmTC_ffa9f  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_ffa9f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cblas_zgemm3m'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ffa9f.dir/build.make:88: cmTC_ffa9f] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ffa9f/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3a8a9/fast && /usr/bin/make -f CMakeFiles/cmTC_3a8a9.dir/build.make CMakeFiles/cmTC_3a8a9.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3a8a9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_3a8a9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3a8a9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a8a9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_3a8a9.dir/CheckFunctionExists.c.o  -o cmTC_3a8a9  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_3a8a9.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3a8a9.dir/build.make:88: cmTC_3a8a9] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3a8a9/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fd6cc/fast && /usr/bin/make -f CMakeFiles/cmTC_fd6cc.dir/build.make CMakeFiles/cmTC_fd6cc.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fd6cc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_fd6cc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fd6cc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd6cc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_fd6cc.dir/CheckFunctionExists.c.o  -o cmTC_fd6cc  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_fd6cc.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_fd6cc.dir/build.make:89: cmTC_fd6cc] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_fd6cc/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6651f/fast && /usr/bin/make -f CMakeFiles/cmTC_6651f.dir/build.make CMakeFiles/cmTC_6651f.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6651f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_6651f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6651f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6651f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_6651f.dir/CheckFunctionExists.c.o  -o cmTC_6651f  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_6651f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6651f.dir/build.make:89: cmTC_6651f] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6651f/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e7f5d/fast && /usr/bin/make -f CMakeFiles/cmTC_e7f5d.dir/build.make CMakeFiles/cmTC_e7f5d.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7f5d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_e7f5d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7f5d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7f5d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_e7f5d.dir/CheckFunctionExists.c.o  -o cmTC_e7f5d  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_e7f5d.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e7f5d.dir/build.make:89: cmTC_e7f5d] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e7f5d/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_115b9/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_115b9.dir/build.make CMakeFiles/cmTC_115b9.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_115b9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_115b9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_115b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_115b9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_115b9.dir/CheckFunctionExists.c.o  -o cmTC_115b9  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_115b9.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_115b9.dir/build.make:89: cmTC_115b9] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_115b9/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5f9bc/fast && /usr/bin/make -f CMakeFiles/cmTC_5f9bc.dir/build.make CMakeFiles/cmTC_5f9bc.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f9bc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_5f9bc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5f9bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f9bc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_5f9bc.dir/CheckFunctionExists.c.o  -o cmTC_5f9bc  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_5f9bc.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5f9bc.dir/build.make:89: cmTC_5f9bc] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5f9bc/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_68c57/fast && /usr/bin/make -f CMakeFiles/cmTC_68c57.dir/build.make CMakeFiles/cmTC_68c57.dir/build
+make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_68c57.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_68c57.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_68c57
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68c57.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_68c57.dir/CheckFunctionExists.c.o  -o cmTC_68c57  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_68c57.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_68c57.dir/build.make:89: cmTC_68c57] Error 1
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_68c57/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6d185/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6d185.dir/build.make CMakeFiles/cmTC_6d185.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d185.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_6d185.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6d185
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d185.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_6d185.dir/CheckFunctionExists.c.o  -o cmTC_6d185  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_6d185.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_6d185.dir/build.make:89: cmTC_6d185] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_6d185/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f2019/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f2019.dir/build.make CMakeFiles/cmTC_f2019.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2019.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_f2019.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f2019
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2019.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_f2019.dir/CheckFunctionExists.c.o  -o cmTC_f2019  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_f2019.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_f2019.dir/build.make:89: cmTC_f2019] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_f2019/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_66ade/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_66ade.dir/build.make CMakeFiles/cmTC_66ade.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66ade.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_66ade.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_66ade
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66ade.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_66ade.dir/CheckFunctionExists.c.o  -o cmTC_66ade  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_66ade.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_66ade.dir/build.make:89: cmTC_66ade] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_66ade/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d7abc/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d7abc.dir/build.make CMakeFiles/cmTC_d7abc.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d7abc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_d7abc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d7abc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7abc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_d7abc.dir/CheckFunctionExists.c.o  -o cmTC_d7abc  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_d7abc.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_d7abc.dir/build.make:89: cmTC_d7abc] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_d7abc/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_84eef/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_84eef.dir/build.make CMakeFiles/cmTC_84eef.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84eef.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_84eef.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_84eef
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84eef.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_84eef.dir/CheckFunctionExists.c.o  -o cmTC_84eef  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_84eef.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_84eef.dir/build.make:89: cmTC_84eef] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_84eef/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_48ce5/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_48ce5.dir/build.make CMakeFiles/cmTC_48ce5.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_48ce5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_48ce5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_48ce5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48ce5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_48ce5.dir/CheckFunctionExists.c.o  -o cmTC_48ce5  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_48ce5.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_48ce5.dir/build.make:89: cmTC_48ce5] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_48ce5/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2c29e/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_2c29e.dir/build.make CMakeFiles/cmTC_2c29e.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2c29e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_2c29e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2c29e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c29e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_2c29e.dir/CheckFunctionExists.c.o  -o cmTC_2c29e  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_2c29e.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_2c29e.dir/build.make:89: cmTC_2c29e] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_2c29e/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /test2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_71470/fast && make[1]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_71470.dir/build.make CMakeFiles/cmTC_71470.dir/build
+make[2]: Entering directory '/test2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71470.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_71470.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_71470
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71470.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_71470.dir/CheckFunctionExists.c.o  -o cmTC_71470  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_71470.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_71470.dir/build.make:89: cmTC_71470] Error 1
+make[2]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_71470/fast] Error 2
+make[1]: Leaving directory '/test2/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /imp/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_31848/fast && /usr/bin/make -f CMakeFiles/cmTC_31848.dir/build.make CMakeFiles/cmTC_31848.dir/build
+make[1]: Entering directory '/imp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_31848.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_31848.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_31848
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31848.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_31848.dir/CheckFunctionExists.c.o  -o cmTC_31848 
+/usr/bin/ld: CMakeFiles/cmTC_31848.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_31848.dir/build.make:87: cmTC_31848] Error 1
+make[1]: Leaving directory '/imp/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_31848/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /imp/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_744bf/fast && /usr/bin/make -f CMakeFiles/cmTC_744bf.dir/build.make CMakeFiles/cmTC_744bf.dir/build
+make[1]: Entering directory '/imp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_744bf.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_744bf.dir/src.c.o   -c /imp/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_744bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_744bf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_744bf.dir/src.c.o  -o cmTC_744bf 
+/usr/bin/ld: CMakeFiles/cmTC_744bf.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_744bf.dir/build.make:87: cmTC_744bf] Error 1
+make[1]: Leaving directory '/imp/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_744bf/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /imp/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d6c95/fast && /usr/bin/make -f CMakeFiles/cmTC_d6c95.dir/build.make CMakeFiles/cmTC_d6c95.dir/build
+make[1]: Entering directory '/imp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d6c95.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d6c95.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d6c95
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6c95.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_d6c95.dir/CheckFunctionExists.c.o  -o cmTC_d6c95  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d6c95.dir/build.make:87: cmTC_d6c95] Error 1
+make[1]: Leaving directory '/imp/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d6c95/fast] Error 2
+
+
+
+Determining if the function cblas_zgemm3m exists failed with the following output:
+Change Dir: /imp/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_02bc4/fast && /usr/bin/make -f CMakeFiles/cmTC_02bc4.dir/build.make CMakeFiles/cmTC_02bc4.dir/build
+make[1]: Entering directory '/imp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_02bc4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m   -o CMakeFiles/cmTC_02bc4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_02bc4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02bc4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m    -rdynamic CMakeFiles/cmTC_02bc4.dir/CheckFunctionExists.c.o  -o cmTC_02bc4  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_02bc4.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cblas_zgemm3m'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_02bc4.dir/build.make:88: cmTC_02bc4] Error 1
+make[1]: Leaving directory '/imp/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_02bc4/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /imp/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_330d4/fast && /usr/bin/make -f CMakeFiles/cmTC_330d4.dir/build.make CMakeFiles/cmTC_330d4.dir/build
+make[1]: Entering directory '/imp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_330d4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_330d4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_330d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_330d4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_330d4.dir/CheckFunctionExists.c.o  -o cmTC_330d4  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_330d4.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_330d4.dir/build.make:88: cmTC_330d4] Error 1
+make[1]: Leaving directory '/imp/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_330d4/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /imp/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e23eb/fast && /usr/bin/make -f CMakeFiles/cmTC_e23eb.dir/build.make CMakeFiles/cmTC_e23eb.dir/build
+make[1]: Entering directory '/imp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e23eb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_e23eb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e23eb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e23eb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_e23eb.dir/CheckFunctionExists.c.o  -o cmTC_e23eb  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_e23eb.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e23eb.dir/build.make:89: cmTC_e23eb] Error 1
+make[1]: Leaving directory '/imp/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e23eb/fast] Error 2
+
+
+
