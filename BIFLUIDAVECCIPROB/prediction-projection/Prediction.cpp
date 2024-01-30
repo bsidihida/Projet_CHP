@@ -253,9 +253,10 @@ double ier=0;
     {
       if (!divergence.exists(owners[0]))
         divergence.emplace(owners[0]);
+        if(isVertical){
      
 
-      divergence[owners[0]][0] += _mufc[inter.getId()]*(gradientUx)
+      divergence[owners[0]][0] += _mufc[inter.getId()]*(2*gradientUx+gradientUy)
                                
                                * _grid->evalInterfaceArea(interId)
                                / _grid->evalCellVolume(owners[0]);
@@ -274,7 +275,7 @@ double ier=0;
         if (!divergence.exists(owners[1]))
           divergence.emplace(owners[1]);
 
-        divergence[owners[1]][0] -= _mufc[inter.getId()]*(gradientUx)
+        divergence[owners[1]][0] -= _mufc[inter.getId()]*(2*gradientUx+gradientUy)
                                 
                                  * _grid->evalInterfaceArea(interId)
                                  / _grid->evalCellVolume(owners[1]);
@@ -286,6 +287,47 @@ double ier=0;
 
       }
     }
+    }
+
+    else{
+
+        
+
+      divergence[owners[0]][0] += _mufc[inter.getId()]*(gradientUx)
+                               
+                               * _grid->evalInterfaceArea(interId)
+                               / _grid->evalCellVolume(owners[0]);
+      divergence[owners[0]][1] += _mufc[inter.getId()]*(2*gradientUy+gradientUx)
+                               
+                               * _grid->evalInterfaceArea(interId)
+                               / _grid->evalCellVolume(owners[0]);
+   
+
+    
+
+    if (owners[1] != bitpit::Element::NULL_ID)
+    {
+      if (_grid->getCell(owners[1]).isInterior())
+      {
+        if (!divergence.exists(owners[1]))
+          divergence.emplace(owners[1]);
+
+        divergence[owners[1]][0] -= _mufc[inter.getId()]*(gradientUx)
+                                
+                                 * _grid->evalInterfaceArea(interId)
+                                 / _grid->evalCellVolume(owners[1]);
+        divergence[owners[1]][1] -= _mufc[inter.getId()]*(2*gradientUy+gradientUx)
+                                 
+                                 * _grid->evalInterfaceArea(interId)
+                                 / _grid->evalCellVolume(owners[1]);
+   
+
+      }
+    }
+
+
+
+        
     }
     
     
