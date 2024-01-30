@@ -70,15 +70,11 @@ int main(int ac, char **av) {
 
 
   auto start = std::chrono::high_resolution_clock::now();
-  Grid *grid = new Grid(0, 0, 0, 1, 0.025, &BC, GRID_2D);
+  Grid *grid = new Grid(0, 0, 0, 1, 0.0025, &BC, GRID_2D);
 
 
 
-  auto stop = std::chrono::high_resolution_clock::now();
-  auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop-start);
 
-  std::cout<<"---------fin creation grille------"<<std::endl;
-  std::cout << "Calculation time : " << duration.count() <<" seconds\n"<<std::endl;
 
   /*------------------ Build useful stencils--------------*/
   StencilBuilder stencils(grid);
@@ -158,6 +154,12 @@ int main(int ac, char **av) {
 
   /* ----------------- Solve ---------------------- */
   lap->solveLaplacian();
+
+  auto stop = std::chrono::high_resolution_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop-start);
+
+  std::cout<<"---------fin creation grille------"<<std::endl;
+  std::cout << "Calculation time : " << duration.count() <<" seconds\n"<<std::endl;
 
   /*----------- Compare numerical and exact solution ----------*/
   std::vector<double> U = lap->getSolution();
