@@ -1,0 +1,504 @@
+[2024-01-29 16:51:33.509] >> Initializing Octree mesh
+[2024-01-29 16:51:33.509] >> Syncing patch...
+[2024-01-29 16:51:33.509] >> Number of octants : 4096
+[2024-01-29 16:51:33.509] >> Extract information for transforming the patch... Done
+[2024-01-29 16:51:33.517] >> Importing new octants... Done
+[2024-01-29 16:51:33.517] >> Octants imported: 4096
+[2024-01-29 16:54:08.60] >> Initializing Octree mesh
+[2024-01-29 16:54:08.61] >> Syncing patch...
+[2024-01-29 16:54:08.61] >> Number of octants : 4096
+[2024-01-29 16:54:08.61] >> Extract information for transforming the patch... Done
+[2024-01-29 16:54:08.68] >> Importing new octants... Done
+[2024-01-29 16:54:08.68] >> Octants imported: 4096
+[2024-01-29 16:59:03.438] >> Initializing Octree mesh
+[2024-01-29 16:59:03.439] >> Syncing patch...
+[2024-01-29 16:59:03.439] >> Number of octants : 4096
+[2024-01-29 16:59:03.439] >> Extract information for transforming the patch... Done
+[2024-01-29 16:59:03.447] >> Importing new octants... Done
+[2024-01-29 16:59:03.447] >> Octants imported: 4096
+[2024-01-29 16:59:21.863] >> Initializing Octree mesh
+[2024-01-29 16:59:21.863] >> Syncing patch...
+[2024-01-29 16:59:21.863] >> Number of octants : 4096
+[2024-01-29 16:59:21.863] >> Extract information for transforming the patch... Done
+[2024-01-29 16:59:21.871] >> Importing new octants... Done
+[2024-01-29 16:59:21.871] >> Octants imported: 4096
+[2024-01-29 18:32:08.576] >> Initializing Octree mesh
+[2024-01-29 18:32:08.576] >> Syncing patch...
+[2024-01-29 18:32:08.576] >> Number of octants : 4096
+[2024-01-29 18:32:08.577] >> Extract information for transforming the patch... Done
+[2024-01-29 18:32:08.584] >> Importing new octants... Done
+[2024-01-29 18:32:08.584] >> Octants imported: 4096
+[2024-01-29 18:32:16.923] >> Initializing Octree mesh
+[2024-01-29 18:32:16.923] >> Syncing patch...
+[2024-01-29 18:32:16.923] >> Number of octants : 4096
+[2024-01-29 18:32:16.923] >> Extract information for transforming the patch... Done
+[2024-01-29 18:32:16.931] >> Importing new octants... Done
+[2024-01-29 18:32:16.931] >> Octants imported: 4096
+[2024-01-29 19:50:05.669] >> Initializing Octree mesh
+[2024-01-29 19:50:05.670] >> Syncing patch...
+[2024-01-29 19:50:05.670] >> Number of octants : 16384
+[2024-01-29 19:50:05.670] >> Extract information for transforming the patch... Done
+[2024-01-29 19:50:05.707] >> Importing new octants... Done
+[2024-01-29 19:50:05.708] >> Octants imported: 16384
+[2024-01-29 21:27:23.539] >> Initializing Octree mesh
+[2024-01-29 21:27:23.540] >> Syncing patch...
+[2024-01-29 21:27:23.540] >> Number of octants : 16384
+[2024-01-29 21:27:23.540] >> Extract information for transforming the patch... Done
+[2024-01-29 21:27:23.577] >> Importing new octants... Done
+[2024-01-29 21:27:23.577] >> Octants imported: 16384
+[2024-01-29 21:27:52.223] >> Initializing Octree mesh
+[2024-01-29 21:27:52.224] >> Syncing patch...
+[2024-01-29 21:27:52.224] >> Number of octants : 16384
+[2024-01-29 21:27:52.224] >> Extract information for transforming the patch... Done
+[2024-01-29 21:27:52.259] >> Importing new octants... Done
+[2024-01-29 21:27:52.259] >> Octants imported: 16384
+[2024-01-30 14:15:05.878] >> Initializing Octree mesh
+[2024-01-30 14:15:05.879] >> Syncing patch...
+[2024-01-30 14:15:05.879] >> Number of octants : 16384
+[2024-01-30 14:15:05.879] >> Extract information for transforming the patch... Done
+[2024-01-30 14:15:05.913] >> Importing new octants... Done
+[2024-01-30 14:15:05.913] >> Octants imported: 16384
+[2024-01-30 14:15:47.328] >> Initializing Octree mesh
+[2024-01-30 14:15:47.328] >> Syncing patch...
+[2024-01-30 14:15:47.328] >> Number of octants : 4096
+[2024-01-30 14:15:47.328] >> Extract information for transforming the patch... Done
+[2024-01-30 14:15:47.336] >> Importing new octants... Done
+[2024-01-30 14:15:47.336] >> Octants imported: 4096
+[2024-01-30 14:20:54.800] >> Initializing Octree mesh
+[2024-01-30 14:20:54.800] >> Syncing patch...
+[2024-01-30 14:20:54.800] >> Number of octants : 4096
+[2024-01-30 14:20:54.800] >> Extract information for transforming the patch... Done
+[2024-01-30 14:20:54.809] >> Importing new octants... Done
+[2024-01-30 14:20:54.809] >> Octants imported: 4096
+[2024-01-30 14:21:53.651] >> Initializing Octree mesh
+[2024-01-30 14:21:53.652] >> Syncing patch...
+[2024-01-30 14:21:53.652] >> Number of octants : 4096
+[2024-01-30 14:21:53.652] >> Extract information for transforming the patch... Done
+[2024-01-30 14:21:53.660] >> Importing new octants... Done
+[2024-01-30 14:21:53.660] >> Octants imported: 4096
+[2024-01-30 14:22:27.971] >> Initializing Octree mesh
+[2024-01-30 14:22:27.971] >> Syncing patch...
+[2024-01-30 14:22:27.972] >> Number of octants : 4096
+[2024-01-30 14:22:27.972] >> Extract information for transforming the patch... Done
+[2024-01-30 14:22:27.980] >> Importing new octants... Done
+[2024-01-30 14:22:27.980] >> Octants imported: 4096
+[2024-01-30 14:45:26.549] >> Initializing Octree mesh
+[2024-01-30 14:45:26.550] >> Syncing patch...
+[2024-01-30 14:45:26.550] >> Number of octants : 4096
+[2024-01-30 14:45:26.550] >> Extract information for transforming the patch... Done
+[2024-01-30 14:45:26.558] >> Importing new octants... Done
+[2024-01-30 14:45:26.558] >> Octants imported: 4096
+[2024-01-30 14:52:37.824] >> Initializing Octree mesh
+[2024-01-30 14:52:37.824] >> Syncing patch...
+[2024-01-30 14:52:37.824] >> Number of octants : 4096
+[2024-01-30 14:52:37.824] >> Extract information for transforming the patch... Done
+[2024-01-30 14:52:37.832] >> Importing new octants... Done
+[2024-01-30 14:52:37.832] >> Octants imported: 4096
+[2024-01-30 14:53:10.642] >> Initializing Octree mesh
+[2024-01-30 14:53:10.642] >> Syncing patch...
+[2024-01-30 14:53:10.642] >> Number of octants : 4096
+[2024-01-30 14:53:10.642] >> Extract information for transforming the patch... Done
+[2024-01-30 14:53:10.650] >> Importing new octants... Done
+[2024-01-30 14:53:10.650] >> Octants imported: 4096
+[2024-01-30 15:01:47.824] >> Initializing Octree mesh
+[2024-01-30 15:01:47.824] >> Syncing patch...
+[2024-01-30 15:01:47.824] >> Number of octants : 4096
+[2024-01-30 15:01:47.824] >> Extract information for transforming the patch... Done
+[2024-01-30 15:01:47.833] >> Importing new octants... Done
+[2024-01-30 15:01:47.833] >> Octants imported: 4096
+[2024-01-30 15:03:12.606] >> Initializing Octree mesh
+[2024-01-30 15:03:12.606] >> Syncing patch...
+[2024-01-30 15:03:12.606] >> Number of octants : 4096
+[2024-01-30 15:03:12.606] >> Extract information for transforming the patch... Done
+[2024-01-30 15:03:12.614] >> Importing new octants... Done
+[2024-01-30 15:03:12.614] >> Octants imported: 4096
+[2024-01-30 15:04:59.69] >> Initializing Octree mesh
+[2024-01-30 15:04:59.69] >> Syncing patch...
+[2024-01-30 15:04:59.69] >> Number of octants : 4096
+[2024-01-30 15:04:59.70] >> Extract information for transforming the patch... Done
+[2024-01-30 15:04:59.77] >> Importing new octants... Done
+[2024-01-30 15:04:59.77] >> Octants imported: 4096
+[2024-01-30 15:21:14.284] >> Initializing Octree mesh
+[2024-01-30 15:21:14.285] >> Syncing patch...
+[2024-01-30 15:21:14.285] >> Number of octants : 4096
+[2024-01-30 15:21:14.285] >> Extract information for transforming the patch... Done
+[2024-01-30 15:21:14.292] >> Importing new octants... Done
+[2024-01-30 15:21:14.292] >> Octants imported: 4096
+[2024-01-30 15:28:21.232] >> Initializing Octree mesh
+[2024-01-30 15:28:21.232] >> Syncing patch...
+[2024-01-30 15:28:21.232] >> Number of octants : 4096
+[2024-01-30 15:28:21.232] >> Extract information for transforming the patch... Done
+[2024-01-30 15:28:21.240] >> Importing new octants... Done
+[2024-01-30 15:28:21.240] >> Octants imported: 4096
+[2024-01-30 15:30:05.346] >> Initializing Octree mesh
+[2024-01-30 15:30:05.346] >> Syncing patch...
+[2024-01-30 15:30:05.346] >> Number of octants : 4096
+[2024-01-30 15:30:05.347] >> Extract information for transforming the patch... Done
+[2024-01-30 15:30:05.355] >> Importing new octants... Done
+[2024-01-30 15:30:05.355] >> Octants imported: 4096
+[2024-01-30 15:39:07.951] >> Initializing Octree mesh
+[2024-01-30 15:39:07.951] >> Syncing patch...
+[2024-01-30 15:39:07.951] >> Number of octants : 4096
+[2024-01-30 15:39:07.951] >> Extract information for transforming the patch... Done
+[2024-01-30 15:39:07.959] >> Importing new octants... Done
+[2024-01-30 15:39:07.960] >> Octants imported: 4096
+[2024-01-30 15:41:09.551] >> Initializing Octree mesh
+[2024-01-30 15:41:09.551] >> Syncing patch...
+[2024-01-30 15:41:09.551] >> Number of octants : 4096
+[2024-01-30 15:41:09.551] >> Extract information for transforming the patch... Done
+[2024-01-30 15:41:09.559] >> Importing new octants... Done
+[2024-01-30 15:41:09.559] >> Octants imported: 4096
+[2024-01-30 15:42:57.604] >> Initializing Octree mesh
+[2024-01-30 15:42:57.604] >> Syncing patch...
+[2024-01-30 15:42:57.604] >> Number of octants : 4096
+[2024-01-30 15:42:57.604] >> Extract information for transforming the patch... Done
+[2024-01-30 15:42:57.612] >> Importing new octants... Done
+[2024-01-30 15:42:57.612] >> Octants imported: 4096
+[2024-01-30 15:43:58.154] >> Initializing Octree mesh
+[2024-01-30 15:43:58.154] >> Syncing patch...
+[2024-01-30 15:43:58.154] >> Number of octants : 4096
+[2024-01-30 15:43:58.154] >> Extract information for transforming the patch... Done
+[2024-01-30 15:43:58.162] >> Importing new octants... Done
+[2024-01-30 15:43:58.162] >> Octants imported: 4096
+[2024-01-30 15:46:09.47] >> Initializing Octree mesh
+[2024-01-30 15:46:09.48] >> Syncing patch...
+[2024-01-30 15:46:09.48] >> Number of octants : 4096
+[2024-01-30 15:46:09.48] >> Extract information for transforming the patch... Done
+[2024-01-30 15:46:09.56] >> Importing new octants... Done
+[2024-01-30 15:46:09.56] >> Octants imported: 4096
+[2024-01-30 15:46:46.658] >> Initializing Octree mesh
+[2024-01-30 15:46:46.658] >> Syncing patch...
+[2024-01-30 15:46:46.658] >> Number of octants : 4096
+[2024-01-30 15:46:46.658] >> Extract information for transforming the patch... Done
+[2024-01-30 15:46:46.667] >> Importing new octants... Done
+[2024-01-30 15:46:46.667] >> Octants imported: 4096
+[2024-01-30 15:47:16.112] >> Initializing Octree mesh
+[2024-01-30 15:47:16.113] >> Syncing patch...
+[2024-01-30 15:47:16.113] >> Number of octants : 4096
+[2024-01-30 15:47:16.113] >> Extract information for transforming the patch... Done
+[2024-01-30 15:47:16.121] >> Importing new octants... Done
+[2024-01-30 15:47:16.121] >> Octants imported: 4096
+[2024-01-30 15:47:43.32] >> Initializing Octree mesh
+[2024-01-30 15:47:43.33] >> Syncing patch...
+[2024-01-30 15:47:43.33] >> Number of octants : 4096
+[2024-01-30 15:47:43.33] >> Extract information for transforming the patch... Done
+[2024-01-30 15:47:43.41] >> Importing new octants... Done
+[2024-01-30 15:47:43.41] >> Octants imported: 4096
+[2024-01-30 15:49:24.630] >> Initializing Octree mesh
+[2024-01-30 15:49:24.630] >> Syncing patch...
+[2024-01-30 15:49:24.630] >> Number of octants : 4096
+[2024-01-30 15:49:24.630] >> Extract information for transforming the patch... Done
+[2024-01-30 15:49:24.638] >> Importing new octants... Done
+[2024-01-30 15:49:24.638] >> Octants imported: 4096
+[2024-01-30 15:50:56.501] >> Initializing Octree mesh
+[2024-01-30 15:50:56.501] >> Syncing patch...
+[2024-01-30 15:50:56.501] >> Number of octants : 4096
+[2024-01-30 15:50:56.501] >> Extract information for transforming the patch... Done
+[2024-01-30 15:50:56.510] >> Importing new octants... Done
+[2024-01-30 15:50:56.510] >> Octants imported: 4096
+[2024-01-30 16:05:35.970] >> Initializing Octree mesh
+[2024-01-30 16:05:35.970] >> Syncing patch...
+[2024-01-30 16:05:35.970] >> Number of octants : 4096
+[2024-01-30 16:05:35.970] >> Extract information for transforming the patch... Done
+[2024-01-30 16:05:35.979] >> Importing new octants... Done
+[2024-01-30 16:05:35.979] >> Octants imported: 4096
+[2024-01-30 16:06:43.987] >> Initializing Octree mesh
+[2024-01-30 16:06:43.988] >> Syncing patch...
+[2024-01-30 16:06:43.988] >> Number of octants : 4096
+[2024-01-30 16:06:43.988] >> Extract information for transforming the patch... Done
+[2024-01-30 16:06:43.996] >> Importing new octants... Done
+[2024-01-30 16:06:43.996] >> Octants imported: 4096
+[2024-01-30 16:07:59.467] >> Initializing Octree mesh
+[2024-01-30 16:07:59.467] >> Syncing patch...
+[2024-01-30 16:07:59.467] >> Number of octants : 4096
+[2024-01-30 16:07:59.468] >> Extract information for transforming the patch... Done
+[2024-01-30 16:07:59.476] >> Importing new octants... Done
+[2024-01-30 16:07:59.476] >> Octants imported: 4096
+[2024-01-30 16:09:54.117] >> Initializing Octree mesh
+[2024-01-30 16:09:54.117] >> Syncing patch...
+[2024-01-30 16:09:54.117] >> Number of octants : 4096
+[2024-01-30 16:09:54.117] >> Extract information for transforming the patch... Done
+[2024-01-30 16:09:54.125] >> Importing new octants... Done
+[2024-01-30 16:09:54.125] >> Octants imported: 4096
+[2024-01-30 16:10:02.880] >> Initializing Octree mesh
+[2024-01-30 16:10:02.880] >> Syncing patch...
+[2024-01-30 16:10:02.880] >> Number of octants : 4096
+[2024-01-30 16:10:02.881] >> Extract information for transforming the patch... Done
+[2024-01-30 16:10:02.890] >> Importing new octants... Done
+[2024-01-30 16:10:02.890] >> Octants imported: 4096
+[2024-01-30 16:13:01.655] >> Initializing Octree mesh
+[2024-01-30 16:13:01.656] >> Syncing patch...
+[2024-01-30 16:13:01.656] >> Number of octants : 4096
+[2024-01-30 16:13:01.656] >> Extract information for transforming the patch... Done
+[2024-01-30 16:13:01.664] >> Importing new octants... Done
+[2024-01-30 16:13:01.664] >> Octants imported: 4096
+[2024-01-30 18:12:34.263] >> Initializing Octree mesh
+[2024-01-30 18:12:34.264] >> Syncing patch...
+[2024-01-30 18:12:34.264] >> Number of octants : 4096
+[2024-01-30 18:12:34.264] >> Extract information for transforming the patch... Done
+[2024-01-30 18:12:34.272] >> Importing new octants... Done
+[2024-01-30 18:12:34.272] >> Octants imported: 4096
+[2024-01-30 18:20:24.794] >> Initializing Octree mesh
+[2024-01-30 18:20:24.795] >> Syncing patch...
+[2024-01-30 18:20:24.795] >> Number of octants : 4096
+[2024-01-30 18:20:24.795] >> Extract information for transforming the patch... Done
+[2024-01-30 18:20:24.803] >> Importing new octants... Done
+[2024-01-30 18:20:24.803] >> Octants imported: 4096
+[2024-01-30 18:23:29.492] >> Initializing Octree mesh
+[2024-01-30 18:23:29.492] >> Syncing patch...
+[2024-01-30 18:23:29.493] >> Number of octants : 4096
+[2024-01-30 18:23:29.493] >> Extract information for transforming the patch... Done
+[2024-01-30 18:23:29.500] >> Importing new octants... Done
+[2024-01-30 18:23:29.500] >> Octants imported: 4096
+[2024-01-30 18:24:15.545] >> Initializing Octree mesh
+[2024-01-30 18:24:15.546] >> Syncing patch...
+[2024-01-30 18:24:15.546] >> Number of octants : 4096
+[2024-01-30 18:24:15.546] >> Extract information for transforming the patch... Done
+[2024-01-30 18:24:15.554] >> Importing new octants... Done
+[2024-01-30 18:24:15.554] >> Octants imported: 4096
+[2024-01-30 18:24:42.878] >> Initializing Octree mesh
+[2024-01-30 18:24:42.878] >> Syncing patch...
+[2024-01-30 18:24:42.878] >> Number of octants : 4096
+[2024-01-30 18:24:42.878] >> Extract information for transforming the patch... Done
+[2024-01-30 18:24:42.886] >> Importing new octants... Done
+[2024-01-30 18:24:42.886] >> Octants imported: 4096
+[2024-01-30 18:25:16.629] >> Initializing Octree mesh
+[2024-01-30 18:25:16.629] >> Syncing patch...
+[2024-01-30 18:25:16.629] >> Number of octants : 4096
+[2024-01-30 18:25:16.629] >> Extract information for transforming the patch... Done
+[2024-01-30 18:25:16.637] >> Importing new octants... Done
+[2024-01-30 18:25:16.637] >> Octants imported: 4096
+[2024-01-30 18:27:30.603] >> Initializing Octree mesh
+[2024-01-30 18:27:30.604] >> Syncing patch...
+[2024-01-30 18:27:30.604] >> Number of octants : 4096
+[2024-01-30 18:27:30.604] >> Extract information for transforming the patch... Done
+[2024-01-30 18:27:30.612] >> Importing new octants... Done
+[2024-01-30 18:27:30.612] >> Octants imported: 4096
+[2024-01-30 18:29:51.812] >> Initializing Octree mesh
+[2024-01-30 18:29:51.812] >> Syncing patch...
+[2024-01-30 18:29:51.812] >> Number of octants : 4096
+[2024-01-30 18:29:51.812] >> Extract information for transforming the patch... Done
+[2024-01-30 18:29:51.820] >> Importing new octants... Done
+[2024-01-30 18:29:51.820] >> Octants imported: 4096
+[2024-01-30 18:33:21.91] >> Initializing Octree mesh
+[2024-01-30 18:33:21.92] >> Syncing patch...
+[2024-01-30 18:33:21.92] >> Number of octants : 4096
+[2024-01-30 18:33:21.92] >> Extract information for transforming the patch... Done
+[2024-01-30 18:33:21.100] >> Importing new octants... Done
+[2024-01-30 18:33:21.100] >> Octants imported: 4096
+[2024-01-30 18:35:21.814] >> Initializing Octree mesh
+[2024-01-30 18:35:21.814] >> Syncing patch...
+[2024-01-30 18:35:21.814] >> Number of octants : 4096
+[2024-01-30 18:35:21.814] >> Extract information for transforming the patch... Done
+[2024-01-30 18:35:21.822] >> Importing new octants... Done
+[2024-01-30 18:35:21.822] >> Octants imported: 4096
+[2024-01-30 18:37:39.51] >> Initializing Octree mesh
+[2024-01-30 18:37:39.51] >> Syncing patch...
+[2024-01-30 18:37:39.51] >> Number of octants : 4096
+[2024-01-30 18:37:39.51] >> Extract information for transforming the patch... Done
+[2024-01-30 18:37:39.59] >> Importing new octants... Done
+[2024-01-30 18:37:39.59] >> Octants imported: 4096
+[2024-01-30 18:39:17.470] >> Initializing Octree mesh
+[2024-01-30 18:39:17.470] >> Syncing patch...
+[2024-01-30 18:39:17.470] >> Number of octants : 4096
+[2024-01-30 18:39:17.470] >> Extract information for transforming the patch... Done
+[2024-01-30 18:39:17.478] >> Importing new octants... Done
+[2024-01-30 18:39:17.478] >> Octants imported: 4096
+[2024-01-30 18:41:29.180] >> Initializing Octree mesh
+[2024-01-30 18:41:29.181] >> Syncing patch...
+[2024-01-30 18:41:29.181] >> Number of octants : 4096
+[2024-01-30 18:41:29.181] >> Extract information for transforming the patch... Done
+[2024-01-30 18:41:29.189] >> Importing new octants... Done
+[2024-01-30 18:41:29.189] >> Octants imported: 4096
+[2024-01-30 18:44:16.592] >> Initializing Octree mesh
+[2024-01-30 18:44:16.592] >> Syncing patch...
+[2024-01-30 18:44:16.592] >> Number of octants : 4096
+[2024-01-30 18:44:16.592] >> Extract information for transforming the patch... Done
+[2024-01-30 18:44:16.600] >> Importing new octants... Done
+[2024-01-30 18:44:16.601] >> Octants imported: 4096
+[2024-01-30 18:46:25.222] >> Initializing Octree mesh
+[2024-01-30 18:46:25.222] >> Syncing patch...
+[2024-01-30 18:46:25.222] >> Number of octants : 4096
+[2024-01-30 18:46:25.222] >> Extract information for transforming the patch... Done
+[2024-01-30 18:46:25.230] >> Importing new octants... Done
+[2024-01-30 18:46:25.230] >> Octants imported: 4096
+[2024-01-30 18:46:45.854] >> Initializing Octree mesh
+[2024-01-30 18:46:45.854] >> Syncing patch...
+[2024-01-30 18:46:45.854] >> Number of octants : 4096
+[2024-01-30 18:46:45.854] >> Extract information for transforming the patch... Done
+[2024-01-30 18:46:45.862] >> Importing new octants... Done
+[2024-01-30 18:46:45.862] >> Octants imported: 4096
+[2024-01-30 18:47:15.922] >> Initializing Octree mesh
+[2024-01-30 18:47:15.922] >> Syncing patch...
+[2024-01-30 18:47:15.922] >> Number of octants : 4096
+[2024-01-30 18:47:15.922] >> Extract information for transforming the patch... Done
+[2024-01-30 18:47:15.930] >> Importing new octants... Done
+[2024-01-30 18:47:15.930] >> Octants imported: 4096
+[2024-01-30 18:51:12.921] >> Initializing Octree mesh
+[2024-01-30 18:51:12.921] >> Syncing patch...
+[2024-01-30 18:51:12.921] >> Number of octants : 4096
+[2024-01-30 18:51:12.921] >> Extract information for transforming the patch... Done
+[2024-01-30 18:51:12.930] >> Importing new octants... Done
+[2024-01-30 18:51:12.930] >> Octants imported: 4096
+[2024-01-30 18:58:23.636] >> Initializing Octree mesh
+[2024-01-30 18:58:23.636] >> Syncing patch...
+[2024-01-30 18:58:23.636] >> Number of octants : 4096
+[2024-01-30 18:58:23.636] >> Extract information for transforming the patch... Done
+[2024-01-30 18:58:23.644] >> Importing new octants... Done
+[2024-01-30 18:58:23.644] >> Octants imported: 4096
+[2024-01-30 18:58:54.503] >> Initializing Octree mesh
+[2024-01-30 18:58:54.503] >> Syncing patch...
+[2024-01-30 18:58:54.503] >> Number of octants : 4096
+[2024-01-30 18:58:54.503] >> Extract information for transforming the patch... Done
+[2024-01-30 18:58:54.511] >> Importing new octants... Done
+[2024-01-30 18:58:54.511] >> Octants imported: 4096
+[2024-01-30 19:00:09.301] >> Initializing Octree mesh
+[2024-01-30 19:00:09.302] >> Syncing patch...
+[2024-01-30 19:00:09.302] >> Number of octants : 4096
+[2024-01-30 19:00:09.302] >> Extract information for transforming the patch... Done
+[2024-01-30 19:00:09.310] >> Importing new octants... Done
+[2024-01-30 19:00:09.310] >> Octants imported: 4096
+[2024-01-30 19:00:49.231] >> Initializing Octree mesh
+[2024-01-30 19:00:49.231] >> Syncing patch...
+[2024-01-30 19:00:49.231] >> Number of octants : 4096
+[2024-01-30 19:00:49.231] >> Extract information for transforming the patch... Done
+[2024-01-30 19:00:49.240] >> Importing new octants... Done
+[2024-01-30 19:00:49.240] >> Octants imported: 4096
+[2024-01-30 19:01:23.519] >> Initializing Octree mesh
+[2024-01-30 19:01:23.520] >> Syncing patch...
+[2024-01-30 19:01:23.520] >> Number of octants : 4096
+[2024-01-30 19:01:23.520] >> Extract information for transforming the patch... Done
+[2024-01-30 19:01:23.529] >> Importing new octants... Done
+[2024-01-30 19:01:23.529] >> Octants imported: 4096
+[2024-01-30 19:02:14.333] >> Initializing Octree mesh
+[2024-01-30 19:02:14.334] >> Syncing patch...
+[2024-01-30 19:02:14.334] >> Number of octants : 4096
+[2024-01-30 19:02:14.334] >> Extract information for transforming the patch... Done
+[2024-01-30 19:02:14.342] >> Importing new octants... Done
+[2024-01-30 19:02:14.342] >> Octants imported: 4096
+[2024-01-30 19:02:46.453] >> Initializing Octree mesh
+[2024-01-30 19:02:46.454] >> Syncing patch...
+[2024-01-30 19:02:46.454] >> Number of octants : 4096
+[2024-01-30 19:02:46.454] >> Extract information for transforming the patch... Done
+[2024-01-30 19:02:46.462] >> Importing new octants... Done
+[2024-01-30 19:02:46.462] >> Octants imported: 4096
+[2024-01-30 19:13:48.867] >> Initializing Octree mesh
+[2024-01-30 19:13:48.867] >> Syncing patch...
+[2024-01-30 19:13:48.867] >> Number of octants : 4096
+[2024-01-30 19:13:48.867] >> Extract information for transforming the patch... Done
+[2024-01-30 19:13:48.875] >> Importing new octants... Done
+[2024-01-30 19:13:48.875] >> Octants imported: 4096
+[2024-01-30 19:15:13.248] >> Initializing Octree mesh
+[2024-01-30 19:15:13.248] >> Syncing patch...
+[2024-01-30 19:15:13.248] >> Number of octants : 4096
+[2024-01-30 19:15:13.248] >> Extract information for transforming the patch... Done
+[2024-01-30 19:15:13.257] >> Importing new octants... Done
+[2024-01-30 19:15:13.257] >> Octants imported: 4096
+[2024-01-30 19:17:24.175] >> Initializing Octree mesh
+[2024-01-30 19:17:24.176] >> Syncing patch...
+[2024-01-30 19:17:24.176] >> Number of octants : 4096
+[2024-01-30 19:17:24.176] >> Extract information for transforming the patch... Done
+[2024-01-30 19:17:24.184] >> Importing new octants... Done
+[2024-01-30 19:17:24.184] >> Octants imported: 4096
+[2024-01-30 19:19:16.850] >> Initializing Octree mesh
+[2024-01-30 19:19:16.850] >> Syncing patch...
+[2024-01-30 19:19:16.851] >> Number of octants : 4096
+[2024-01-30 19:19:16.851] >> Extract information for transforming the patch... Done
+[2024-01-30 19:19:16.859] >> Importing new octants... Done
+[2024-01-30 19:19:16.859] >> Octants imported: 4096
+[2024-01-30 19:22:49.947] >> Initializing Octree mesh
+[2024-01-30 19:22:49.948] >> Syncing patch...
+[2024-01-30 19:22:49.948] >> Number of octants : 4096
+[2024-01-30 19:22:49.948] >> Extract information for transforming the patch... Done
+[2024-01-30 19:22:49.956] >> Importing new octants... Done
+[2024-01-30 19:22:49.956] >> Octants imported: 4096
+[2024-01-30 19:24:10.96] >> Initializing Octree mesh
+[2024-01-30 19:24:10.96] >> Syncing patch...
+[2024-01-30 19:24:10.96] >> Number of octants : 4096
+[2024-01-30 19:24:10.96] >> Extract information for transforming the patch... Done
+[2024-01-30 19:24:10.104] >> Importing new octants... Done
+[2024-01-30 19:24:10.104] >> Octants imported: 4096
+[2024-01-30 19:24:41.84] >> Initializing Octree mesh
+[2024-01-30 19:24:41.84] >> Syncing patch...
+[2024-01-30 19:24:41.84] >> Number of octants : 4096
+[2024-01-30 19:24:41.84] >> Extract information for transforming the patch... Done
+[2024-01-30 19:24:41.92] >> Importing new octants... Done
+[2024-01-30 19:24:41.93] >> Octants imported: 4096
+[2024-01-30 19:25:40.678] >> Initializing Octree mesh
+[2024-01-30 19:25:40.678] >> Syncing patch...
+[2024-01-30 19:25:40.678] >> Number of octants : 4096
+[2024-01-30 19:25:40.678] >> Extract information for transforming the patch... Done
+[2024-01-30 19:25:40.686] >> Importing new octants... Done
+[2024-01-30 19:25:40.686] >> Octants imported: 4096
+[2024-01-30 19:27:12.90] >> Initializing Octree mesh
+[2024-01-30 19:27:12.91] >> Syncing patch...
+[2024-01-30 19:27:12.91] >> Number of octants : 4096
+[2024-01-30 19:27:12.91] >> Extract information for transforming the patch... Done
+[2024-01-30 19:27:12.99] >> Importing new octants... Done
+[2024-01-30 19:27:12.99] >> Octants imported: 4096
+[2024-01-30 19:27:56.965] >> Initializing Octree mesh
+[2024-01-30 19:27:56.965] >> Syncing patch...
+[2024-01-30 19:27:56.965] >> Number of octants : 4096
+[2024-01-30 19:27:56.965] >> Extract information for transforming the patch... Done
+[2024-01-30 19:27:56.974] >> Importing new octants... Done
+[2024-01-30 19:27:56.974] >> Octants imported: 4096
+[2024-01-30 19:29:26.269] >> Initializing Octree mesh
+[2024-01-30 19:29:26.270] >> Syncing patch...
+[2024-01-30 19:29:26.270] >> Number of octants : 4096
+[2024-01-30 19:29:26.270] >> Extract information for transforming the patch... Done
+[2024-01-30 19:29:26.278] >> Importing new octants... Done
+[2024-01-30 19:29:26.278] >> Octants imported: 4096
+[2024-01-30 19:32:01.320] >> Initializing Octree mesh
+[2024-01-30 19:32:01.321] >> Syncing patch...
+[2024-01-30 19:32:01.321] >> Number of octants : 4096
+[2024-01-30 19:32:01.321] >> Extract information for transforming the patch... Done
+[2024-01-30 19:32:01.332] >> Importing new octants... Done
+[2024-01-30 19:32:01.332] >> Octants imported: 4096
+[2024-01-30 19:32:24.731] >> Initializing Octree mesh
+[2024-01-30 19:32:24.731] >> Syncing patch...
+[2024-01-30 19:32:24.731] >> Number of octants : 4096
+[2024-01-30 19:32:24.731] >> Extract information for transforming the patch... Done
+[2024-01-30 19:32:24.739] >> Importing new octants... Done
+[2024-01-30 19:32:24.739] >> Octants imported: 4096
+[2024-01-30 19:33:10.357] >> Initializing Octree mesh
+[2024-01-30 19:33:10.357] >> Syncing patch...
+[2024-01-30 19:33:10.357] >> Number of octants : 4096
+[2024-01-30 19:33:10.357] >> Extract information for transforming the patch... Done
+[2024-01-30 19:33:10.365] >> Importing new octants... Done
+[2024-01-30 19:33:10.365] >> Octants imported: 4096
+[2024-01-30 19:33:30.701] >> Initializing Octree mesh
+[2024-01-30 19:33:30.701] >> Syncing patch...
+[2024-01-30 19:33:30.701] >> Number of octants : 4096
+[2024-01-30 19:33:30.701] >> Extract information for transforming the patch... Done
+[2024-01-30 19:33:30.709] >> Importing new octants... Done
+[2024-01-30 19:33:30.709] >> Octants imported: 4096
+[2024-01-30 19:34:05.820] >> Initializing Octree mesh
+[2024-01-30 19:34:05.820] >> Syncing patch...
+[2024-01-30 19:34:05.820] >> Number of octants : 4096
+[2024-01-30 19:34:05.820] >> Extract information for transforming the patch... Done
+[2024-01-30 19:34:05.828] >> Importing new octants... Done
+[2024-01-30 19:34:05.828] >> Octants imported: 4096
+[2024-01-30 19:34:53.203] >> Initializing Octree mesh
+[2024-01-30 19:34:53.203] >> Syncing patch...
+[2024-01-30 19:34:53.203] >> Number of octants : 4096
+[2024-01-30 19:34:53.203] >> Extract information for transforming the patch... Done
+[2024-01-30 19:34:53.211] >> Importing new octants... Done
+[2024-01-30 19:34:53.211] >> Octants imported: 4096
+[2024-01-30 19:36:05.472] >> Initializing Octree mesh
+[2024-01-30 19:36:05.472] >> Syncing patch...
+[2024-01-30 19:36:05.472] >> Number of octants : 4096
+[2024-01-30 19:36:05.472] >> Extract information for transforming the patch... Done
+[2024-01-30 19:36:05.480] >> Importing new octants... Done
+[2024-01-30 19:36:05.480] >> Octants imported: 4096
+[2024-01-30 19:36:59.883] >> Initializing Octree mesh
+[2024-01-30 19:36:59.883] >> Syncing patch...
+[2024-01-30 19:36:59.883] >> Number of octants : 4096
+[2024-01-30 19:36:59.883] >> Extract information for transforming the patch... Done
+[2024-01-30 19:36:59.892] >> Importing new octants... Done
+[2024-01-30 19:36:59.892] >> Octants imported: 4096
+[2024-01-30 19:40:14.539] >> Initializing Octree mesh
+[2024-01-30 19:40:14.540] >> Syncing patch...
+[2024-01-30 19:40:14.540] >> Number of octants : 4096
+[2024-01-30 19:40:14.540] >> Extract information for transforming the patch... Done
+[2024-01-30 19:40:14.548] >> Importing new octants... Done
+[2024-01-30 19:40:14.548] >> Octants imported: 4096
