@@ -1,0 +1,39 @@
+#ifndef __NEOS_HPP__
+#define __NEOS_HPP__
+
+/**
+ * @file Neos.hpp
+ * @brief List of neos includes
+ * @author Matias Hastaran
+ * @version 0.1
+ * @date 2017-03-14
+ * @copyright Inria
+ */
+
+
+@INCLUDE_FILES@
+
+#include "random"
+#include "math.h"
+
+namespace neos {
+
+  inline void
+  Neos_Init(int* argc=NULL, char*** argv=NULL)
+  {
+    #if defined (ENABLE_MPI)
+    (void)MPI_Init(argc, argv);
+    #endif
+  }
+
+  inline void
+  Neos_Finalize()
+  {
+    #if defined (ENABLE_MPI)
+    (void)MPI_Finalize();
+    #endif
+  }
+
+}
+
+#endif /* __NEOS_HPP__ */
