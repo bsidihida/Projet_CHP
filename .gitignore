@@ -1,0 +1,5 @@
+poissonCos
+*.log
+CMakeCache*.txt
+TaylorGreen
+transportAtmospheric
