@@ -29,11 +29,6 @@
 //#include "patch_kernel.hpp"
 #include "math.h"
 #include <numeric>
-
-#include "patch_kernel.hpp"
-#include <cmath>
-
-
 /**
  * This file contains an example of Poisson equation resolution.
  * The equation is:
@@ -46,13 +41,13 @@
 double u(NPoint pt, double t=0.)
 {
   double x=pt[0], y=pt[1];
-  return x*x +2*x;
+  return (cos(x+y) * sin(x-y));
 }
 
 double laplacianU(NPoint pt)
 {
   double x=pt[0], y=pt[1];
-  return 0;
+  return 4 * u(pt);
 }
 
 using namespace neos;
@@ -70,71 +65,87 @@ int main(int ac, char **av) {
 
 
   auto start = std::chrono::high_resolution_clock::now();
-  Grid *grid = new Grid(0, 0, 0, 1, 0.0025, &BC, GRID_2D);
+  Grid *grid = new Grid(0, 0, 0, 1, 0.01, &BC, GRID_2D);
+
+  /*----------------- Non uniform grid ------------------*/
+  // UNCOMMENT ONE OF THE TWO FOR LOOP IF YOU WANT A NON UNIFORM GRID
+
+  /*------------------- Refinment by boxes --------------*/
+  //for (int k=0; k<3; k++)
+  //{
+  //	for (auto &cell : grid->getCells()) {
+  //	    const long &id = cell.getId();
+  //	    NPoint pt = grid->evalCellCentroid(id);
+  //	    for (auto &v: pt)
+  //	    {
+  //		v = std::abs(v);
+  //	    }
+  //	    double xInf = *std::max_element(pt.begin(), pt.end());
+  //
+  //	    if( xInf <= (M_PI/4.+ 0.3 * k))
+  //	    {
+  //		grid->markCellForRefinement(id);
+  //	    }
+  //
+  //	}
+  //	grid->update(false,true);
+  //}
+
+  /*----------------------- Randomic refinment -----------------*/
+  //for (int k=0; k<3; k++)
+  //{
+  //	for (auto &cell : grid->getCells())
+  //	{
+  //	    const long &id = cell.getId();
+  //	    if (id%5 ==0)
+  //		grid->markCellForRefinement(id);
+  //
+  //	}
+  //	grid->update(false,true);
+  //}
 
 
+  auto stop = std::chrono::high_resolution_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop-start);
 
-
+  std::cout<<"---------fin creation grille------"<<std::endl;
+  std::cout << "Calculation time : " << duration.count() <<" seconds\n"<<std::endl;
 
   /*------------------ Build useful stencils--------------*/
   StencilBuilder stencils(grid);
   stencils.buildCellGradientStencil();
   stencils.buildInterfaceGradientStencil();
-  
-  
 
 
   /*---------------- Build FV Laplacian matrix ---------*/
   Laplacian *lap = LaplacianFactory::get(lapType::FINITEVOLUME, solverType::PETSC, grid);
   lap->setStencils(&stencils);
   lap->toggleNeumann(false);
-  int cellId,intId;
+
   PiercedVector<double> kappaCC, kappaFC, rhs;
   for (auto& cell: grid->getCells())
   { 
     cellId = cell.getId();
-
-    //NPoint octCenter = grid->evalCellCentroid(cellId);
-    
+    NPoint octCenter = g->evalCellCentroid(cellId);
     kappaCC.emplace(cellId);
-    
-      kappaCC[cellId] =grid->evalCellVolume(cellId);;
-      
-     // printf("Le kappacc pour %d,est%f\n",cellId,kappaCC[cellId]);
+    if (octCenter[1]>0.5){
+      kappaCC[cellId] = 1.;
 
-     //if (octCenter[0]==1  &&  octCenter[1]==1) {
+    }
+    else{
+      kappaCC[cellId] = 0.5;
 
-
-     // printf("Le kappacc pour %d,est%f\n",cellId,kappaCC[cellId]);
-
-
-   // }
-    
+    }
     
     rhs.emplace(cell.getId());
   }
   for (auto& inter: grid->getInterfaces())
-  { 
-    intId=inter.getId();
-    NPoint octCenter = grid->evalInterfaceCentroid(intId);
-    kappaFC.emplace(intId);
-      
-        kappaFC[intId] =1./(octCenter[0]+1.); 
-        //printf("Le kappaFC pour %d,est%f\n",intId,kappaFC[intId]);
-
-      
-    
-      
-    
+  {
+    kappaFC.emplace(inter.getId());
+    kappaFC[inter.getId()] = 1.;
   }
 
-
-
-
-  
-
-
-  
+  kappaFC = proj.FaceCenterProjection(kappaCC);
 
   lap->buildFVMatrix(kappaCC,
                     kappaFC,
@@ -154,12 +165,6 @@ int main(int ac, char **av) {
 
   /* ----------------- Solve ---------------------- */
   lap->solveLaplacian();
-
-  auto stop = std::chrono::high_resolution_clock::now();
-  auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop-start);
-
-  std::cout<<"---------fin creation grille------"<<std::endl;
-  std::cout << "Calculation time : " << duration.count() <<" seconds\n"<<std::endl;
 
   /*----------- Compare numerical and exact solution ----------*/
   std::vector<double> U = lap->getSolution();
