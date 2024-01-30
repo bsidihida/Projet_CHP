@@ -1,0 +1,134 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bf25f/fast && /usr/bin/make -f CMakeFiles/cmTC_bf25f.dir/build.make CMakeFiles/cmTC_bf25f.dir/build
+make[1]: Entering directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf25f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_bf25f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bf25f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf25f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_bf25f.dir/CheckFunctionExists.c.o  -o cmTC_bf25f 
+/usr/bin/ld: CMakeFiles/cmTC_bf25f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_bf25f.dir/build.make:87: cmTC_bf25f] Error 1
+make[1]: Leaving directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bf25f/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c551d/fast && /usr/bin/make -f CMakeFiles/cmTC_c551d.dir/build.make CMakeFiles/cmTC_c551d.dir/build
+make[1]: Entering directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c551d.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c551d.dir/src.c.o   -c "/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_c551d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c551d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_c551d.dir/src.c.o  -o cmTC_c551d 
+/usr/bin/ld: CMakeFiles/cmTC_c551d.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c551d.dir/build.make:87: cmTC_c551d] Error 1
+make[1]: Leaving directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c551d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1b5d5/fast && /usr/bin/make -f CMakeFiles/cmTC_1b5d5.dir/build.make CMakeFiles/cmTC_1b5d5.dir/build
+make[1]: Entering directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b5d5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1b5d5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1b5d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b5d5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_1b5d5.dir/CheckFunctionExists.c.o  -o cmTC_1b5d5  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1b5d5.dir/build.make:87: cmTC_1b5d5] Error 1
+make[1]: Leaving directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1b5d5/fast] Error 2
+
+
+
+Determining if the function cblas_zgemm3m exists failed with the following output:
+Change Dir: /Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c49e7/fast && /usr/bin/make -f CMakeFiles/cmTC_c49e7.dir/build.make CMakeFiles/cmTC_c49e7.dir/build
+make[1]: Entering directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c49e7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m   -o CMakeFiles/cmTC_c49e7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c49e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c49e7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cblas_zgemm3m    -rdynamic CMakeFiles/cmTC_c49e7.dir/CheckFunctionExists.c.o  -o cmTC_c49e7  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_c49e7.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cblas_zgemm3m'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c49e7.dir/build.make:88: cmTC_c49e7] Error 1
+make[1]: Leaving directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c49e7/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a558d/fast && /usr/bin/make -f CMakeFiles/cmTC_a558d.dir/build.make CMakeFiles/cmTC_a558d.dir/build
+make[1]: Entering directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a558d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_a558d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a558d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a558d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_a558d.dir/CheckFunctionExists.c.o  -o cmTC_a558d  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_a558d.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a558d.dir/build.make:88: cmTC_a558d] Error 1
+make[1]: Leaving directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a558d/fast] Error 2
+
+
+
+Determining if the function LAPACKE_dgeqrf exists failed with the following output:
+Change Dir: /Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a0cb1/fast && /usr/bin/make -f CMakeFiles/cmTC_a0cb1.dir/build.make CMakeFiles/cmTC_a0cb1.dir/build
+make[1]: Entering directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a0cb1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf   -o CMakeFiles/cmTC_a0cb1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a0cb1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0cb1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=LAPACKE_dgeqrf    -rdynamic CMakeFiles/cmTC_a0cb1.dir/CheckFunctionExists.c.o  -o cmTC_a0cb1  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_a0cb1.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `LAPACKE_dgeqrf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a0cb1.dir/build.make:89: cmTC_a0cb1] Error 1
+make[1]: Leaving directory '/Validation/Validation TaylorGreen/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a0cb1/fast] Error 2
+
+
+

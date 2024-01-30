@@ -1,0 +1,100 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Validation/Validation TaylorGreen/TaylorGreen.cpp
+iostream
+-
+fstream
+-
+vector
+-
+iterator
+-
+array
+-
+math.h
+-
+string
+-
+algorithm
+-
+chrono
+-
+Neos.hpp
+/Validation/Validation TaylorGreen/Neos.hpp
+Transport.hpp
+/Validation/Validation TaylorGreen/Transport.hpp
+CommonTools.hpp
+/Validation/Validation TaylorGreen/CommonTools.hpp
+SimulationParameters.hpp
+/Validation/Validation TaylorGreen/SimulationParameters.hpp
+Elasticity.hpp
+/Validation/Validation TaylorGreen/Elasticity.hpp
+prediction-projection/Projection.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Projection.hpp
+prediction-projection/Prediction.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Prediction.hpp
+
+/Validation/Validation TaylorGreen/prediction-projection/Prediction.cpp
+Prediction.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Prediction.hpp
+LaplacianFactory.hpp
+/Validation/Validation TaylorGreen/prediction-projection/LaplacianFactory.hpp
+Gradient.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Gradient.hpp
+Transport.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Transport.hpp
+chrono
+-
+numeric
+-
+
+/Validation/Validation TaylorGreen/prediction-projection/Prediction.hpp
+Grid.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Grid.hpp
+LaplacianFactory.hpp
+/Validation/Validation TaylorGreen/prediction-projection/LaplacianFactory.hpp
+SimulationParameters.hpp
+/Validation/Validation TaylorGreen/prediction-projection/SimulationParameters.hpp
+StencilBuilder.hpp
+/Validation/Validation TaylorGreen/prediction-projection/StencilBuilder.hpp
+UserDataComm.hpp
+/Validation/Validation TaylorGreen/prediction-projection/UserDataComm.hpp
+NeosSolution.hpp
+/Validation/Validation TaylorGreen/prediction-projection/NeosSolution.hpp
+
+/Validation/Validation TaylorGreen/prediction-projection/Projection.cpp
+numeric
+-
+Projection.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Projection.hpp
+InterpolatorFactory.hpp
+/Validation/Validation TaylorGreen/prediction-projection/InterpolatorFactory.hpp
+RBF.hpp
+/Validation/Validation TaylorGreen/prediction-projection/RBF.hpp
+NeosAssert.hpp
+/Validation/Validation TaylorGreen/prediction-projection/NeosAssert.hpp
+Gradient.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Gradient.hpp
+
+/Validation/Validation TaylorGreen/prediction-projection/Projection.hpp
+Grid.hpp
+/Validation/Validation TaylorGreen/prediction-projection/Grid.hpp
+common.hpp
+/Validation/Validation TaylorGreen/prediction-projection/common.hpp
+LaplacianFactory.hpp
+/Validation/Validation TaylorGreen/prediction-projection/LaplacianFactory.hpp
+NeosPiercedVector.hpp
+/Validation/Validation TaylorGreen/prediction-projection/NeosPiercedVector.hpp
+StencilBuilder.hpp
+/Validation/Validation TaylorGreen/prediction-projection/StencilBuilder.hpp
+SimulationParameters.hpp
+/Validation/Validation TaylorGreen/prediction-projection/SimulationParameters.hpp
+NeosSolution.hpp
+/Validation/Validation TaylorGreen/prediction-projection/NeosSolution.hpp
+

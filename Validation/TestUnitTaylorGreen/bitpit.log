@@ -1,0 +1,6 @@
+[2024-01-26 00:27:38.92] >> Initializing Octree mesh
+[2024-01-26 00:27:38.94] >> Syncing patch...
+[2024-01-26 00:27:38.94] >> Number of octants : 4096
+[2024-01-26 00:27:38.94] >> Extract information for transforming the patch... Done
+[2024-01-26 00:27:38.119] >> Importing new octants... Done
+[2024-01-26 00:27:38.119] >> Octants imported: 4096

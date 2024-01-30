@@ -1,0 +1,3 @@
+/Validation/Validation TaylorGreen/CMakeFiles/rebuild_cache.dir
+/Validation/Validation TaylorGreen/CMakeFiles/edit_cache.dir
+/Validation/Validation TaylorGreen/CMakeFiles/TaylorGreen.dir

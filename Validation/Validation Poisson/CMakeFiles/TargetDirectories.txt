@@ -1,0 +1,3 @@
+/Validation poisson/CMakeFiles/rebuild_cache.dir
+/Validation poisson/CMakeFiles/edit_cache.dir
+/Validation poisson/CMakeFiles/poissonCos.dir
